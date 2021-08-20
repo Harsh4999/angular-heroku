@@ -1,0 +1,17 @@
+<p>trying works!</p>
+<button (click)="getall()">
+  GetData
+</button>
+<div *ngIf="view=='yes'else elseblock">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>name</th>
+    </tr>
+    <tr *ngFor="let d of aliens">
+      <td>{{d.id}}</td>
+      <td>{{d.name}}</td>
+    </tr>
+  </table>
+</div>
+<ng-template #elseblock>No data</ng-template>
